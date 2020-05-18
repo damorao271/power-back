@@ -13,6 +13,7 @@ mongoose
 app.use(express.json());
 app.use("/api/users", users);
 app.use("/api/products", products);
+require("./prod")(app);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
